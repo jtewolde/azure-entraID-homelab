@@ -138,3 +138,88 @@ To verify that the external user got the invite, try to use an email that you ha
 8. Refresh the page to see if the role has been successfully assigned to the selected user.
 
 ![AssignedRole](/images/AssignedRoles.gif)
+
+---
+
+## Step 4: Bulk Import Users
+
+Creating users individually is practical for a small number of accounts, but organizations may need to create many accounts at once.
+
+Microsoft Entra ID provides a **Bulk Create** feature that allows administrators to upload a CSV file containing multiple users.
+
+1. Connect to the [Microsoft Entra Admin Center](https://admin.microsoft.com/) to sign in.
+2. From the menu on the left, open the **Entra ID** option and navigate to **Identity → Users → All users**.
+3. From the top of the page, select the **Bulk Operations** dropdown option and click **"Bulk Create(Preview)"**.
+4. A prompt will pop from the right to download a sample bulk user CSV file. Download the CSV file or use a pre-existing file that you have.
+
+![BulkAdd](/images/BulkAdd.gif)
+
+**Note**: The **.csv** template provides you with the fields included with the user profile. This includes the required username, display name, and initial password. You can also complete optional fields, such as Department and Usage location, at this time. You do not need to fill out all the fields.
+
+5. Open the CSV file in a spreedsheet application like **Microsoft Excel** or import the file onto **Google Drive** and use **Google Sheets** to view the file.
+6. Once the CSV file is opened and able to be edited, add a few more users to the spreadsheet. For example: 
+![CSVUpdate](/images/CSVFinal.png)
+    - **Note:** Make sure that the "**User Principal Name** matches the same structure as the previous manually created users:  PrincipalName@TenantName.onmicrosoft.com 
+
+7. Save the completed CSV file with the multiple users created from your application and export the file is needed.
+8. Return to the **Bulk Create** window in Microsoft Entra ID and select the option to upload the CSV file.
+9. Select the completed CSV file and wait for Microsoft Entra ID to validate the file.
+10. Wait for the notification that the file uploaded successfully. Select the **Submit** button to add the users. After the users have been created, you will be prompted that the creation has succeeded.
+11. Close the **Bulk Create Users** dialog.
+
+![CSVFinal](/images/CSVFinal.png)
+
+---
+
+### Verify Bulk User Creation
+
+After the bulk creation process finished, I returned to:
+
+**Identity → Users → All users**
+
+I verified that the users from the CSV file appeared in the user list.
+
+![BulkCreatedUsers](/images/AllUsers.png)
+
+The bulk creation process successfully demonstrated how multiple cloud user accounts can be provisioned at once instead of manually creating each account individually.
+
+---
+
+## Lab Completion
+
+After completing the user management exercises, I practiced the following Microsoft Entra ID tasks:
+
+- [x] Created a cloud user.
+- [x] Configured user properties.
+- [x] Verified user sign-in.
+- [x] Configured MFA for the test user.
+- [x] Reviewed the license assignment process.
+- [x] Invited an external user.
+- [x] Assigned an administrative role to a user.
+- [x] Created multiple users using bulk import.
+- [x] Verified the bulk-created users.
+
+The license assignment portion was not completed because the required **Microsoft Entra ID Premium** licensing was not available in my Free tenant. The procedure was reviewed from the Microsoft Learn exercise instead.
+
+---
+
+## Lessons Learned
+
+This lab provided hands-on experience with basic cloud identity administration in Microsoft Entra ID.
+
+I learned how to:
+
+- Create and configure cloud user accounts.
+- Verify user authentication and configure MFA.
+- Manage internal and external users.
+- Assign administrative roles using RBAC.
+- Provision multiple users using a CSV file.
+- Understand how Microsoft Entra ID licensing affects available features.
+
+These tasks are applicable to common **IT Help Desk, IT Support, and Identity Administration** responsibilities such as employee onboarding, account management, access provisioning, and user support.
+
+---
+
+## Reference
+
+- [Microsoft Learn - Perform Basic User Management Tasks](https://microsoftlearning.github.io/Get-started-Microsoft-Entra-Management-Tasks/Instructions/Labs/01-perform-basic-user-management.html)
