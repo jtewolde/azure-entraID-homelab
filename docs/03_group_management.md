@@ -49,3 +49,41 @@ After creating the group, I verified that the new Microsoft 365 group appeared u
 ---
 
 ## Step 2: Create a Security Group
+
+A **Security group** can be used to control access to resources and applications. Microsoft Entra ID also supports **dynamic membership**, which allows users to automatically become members of a group when they meet a defined rule.
+
+1. Connect to the [Microsoft Entra Admin Center](https://entra.microsoft.com/).
+2. Navigate to **Groups → All groups** and select the **"New Group"** option to create a new group.
+3. Configure the group using the following settings:
+    - **Group Type**: Security
+    - **Group Name**: Guest Users
+    - **Group Description**: This group has all the Guest users currently in the tenant.
+    - **Membership Type**: Assigned
+4. Under the **Members** heading on the form, click on the **No members selected** hyperlink.
+5. Add any user that you have into the group by marking the box next to their name and choosing the **Select** button.
+6. Select the **Create** button to finalize the group creation.
+
+![SecurityGroup](/images/SecurityGroup.png)
+
+After creating the group, open the group and select Members to verify that the users were successfully added.
+
+This demonstrates how an administrator can organize users into security groups for easier access management.
+
+![ConfirmationSC](/images/SecurityGroupGuests.png)
+
+---
+
+## Step 3: Add an Existing User to a Group
+
+Administrators can add existing users to groups directly from the group's membership settings.
+
+For this exercise, I added the external user created during the previous User Management lab to the Microsoft 365 group.
+
+1. Navigate to **Groups → All groups** and select the group that you want to add the user to.
+    - **Example:** IT Project Team
+2. Select the **Members** option from the menu.
+3. Select **"+ Add Members"** from the menu near the top.
+4. Mark the box next to the user you want to add and use the Select button.
+5. Click the **Refresh** button to verify that the user was successfully added to the group.
+
+![AddToGroup](/images/AddUserGroup.gif)
