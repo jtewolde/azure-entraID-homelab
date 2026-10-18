@@ -87,3 +87,74 @@ For this exercise, I added the external user created during the previous User Ma
 5. Click the **Refresh** button to verify that the user was successfully added to the group.
 
 ![AddToGroup](/images/AddUserGroup.gif)
+
+After adding the user, I verified that the account appeared in the group's member list.
+
+### Alternative Method: 
+
+Users can also be added to groups from the user management section.
+
+1. Navigate to **Identity → Users → All users**.
+2. Find and select the user that you want to add to a group.
+3. Click on the **Groups** item from the menu.
+4. Select the option to **+ Add memberships**.
+5. Mark an existing group and use the Select button to add them.
+
+This provides an alternative method for managing group membership directly from a user's account.
+
+![AddUserToGroup](/images/AddUserToGroup.gif)
+
+---
+
+## Step 4: Manage Group Owners
+
+Group owners are responsible for managing a group's membership and other group-related settings.
+
+When creating a group without specifying an owner, the tenant administrator may automatically become the owner.
+
+1. Navigate to **Groups → All groups** and select the group that you want to add an owner to.
+    - **Example:** IT Project Team
+2. Choose the **Owners** option from the menu.
+    - **Note:** - Your tenant administrator will automatically be added as the owner of a group, if no owner is specified.
+3. Select the **+ Add owners** menu item.
+4. Mark the box next to the user you want to make an owner and use the **Select** button.
+5. Notice the new owner has been added to the group.
+
+![GroupOwners](/images/AddOwner.gif)
+
+The selected user now appears in the group's **Owners** list.
+
+This demonstrated how group ownership can be delegated to another user instead of requiring the tenant administrator to manage every group.
+
+---
+
+## Lab Completion
+
+After completing the group management exercises, I practiced the following Microsoft Entra ID tasks:
+
+- [x] Created a Microsoft 365 group.
+- [x] Created a Security group.
+- [x] Created a dynamic membership rule.
+- [x] Added users to a group.
+- [x] Managed group membership from a user account.
+- [x] Added a group owner.
+- [x] Reviewed group-based licensing.
+- [x] Verified dynamic group membership.
+
+---
+
+## Lessons Learned
+
+This lab provided hands-on experience with using groups to organize and manage cloud identities in Microsoft Entra ID.
+
+I learned how groups can simplify identity administration by allowing administrators to manage collections of users rather than configuring access for each user individually.
+
+I also learned the difference between **Microsoft 365 groups** and **Security groups**, as well as how **dynamic membership** can automatically place users into groups based on user attributes.
+
+These concepts are applicable to common **IT Support, Help Desk, System Administration, and Identity Administration** responsibilities involving user onboarding, access management, and permission administration.
+
+---
+
+## Reference
+
+- [Microsoft Learn - Perform Basic Group Management Tasks](https://microsoftlearning.github.io/Get-started-Microsoft-Entra-Management-Tasks/Instructions/Labs/02-perform-basic-group-management.html)
